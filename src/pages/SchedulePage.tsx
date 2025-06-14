@@ -13,39 +13,39 @@ const SchedulePage = () => {
   const schedule = mockScheduleData[dayName] || [];
 
   const ClassCard = ({ classInfo }: { classInfo: ClassSchedule }) => (
-    <Card className="mb-4 border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow duration-200">
-      <CardContent className="p-4">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-2">
-              <h3 className="font-semibold text-lg text-gray-800">
-                {classInfo.subject}
-              </h3>
-              <Badge 
-                variant={classInfo.type === "Lecture" ? "default" : "secondary"}
-                className="text-xs"
-              >
-                {classInfo.type}
-              </Badge>
-            </div>
-            <div className="flex flex-wrap gap-2 text-sm text-gray-600">
-              <div className="flex items-center gap-1">
-                <Clock className="h-4 w-4" />
-                <span>{classInfo.time}</span>
+    <Card className="mb-4 border-0 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl bg-white/95 backdrop-blur-sm overflow-hidden">
+      <CardContent className="p-5">
+        <div className="space-y-4">
+          <div className="flex items-start justify-between">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-2 flex-wrap">
+                <h3 className="font-bold text-lg text-gray-800 leading-tight">
+                  {classInfo.subject}
+                </h3>
+                <Badge 
+                  variant={classInfo.type === "Lecture" ? "default" : classInfo.type === "Practice" ? "secondary" : "outline"}
+                  className="text-xs font-semibold rounded-full px-3 py-1"
+                >
+                  {classInfo.type}
+                </Badge>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 mb-3">
+                <Clock className="h-4 w-4 text-blue-600" />
+                <span className="font-medium">{classInfo.time}</span>
               </div>
             </div>
           </div>
           
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-1 text-sm">
+          <div className="bg-gray-50/80 rounded-2xl p-4">
+            <div className="flex items-center gap-2 mb-2">
               <Building className="h-4 w-4 text-blue-600" />
-              <span className="font-medium">{classInfo.building}</span>
+              <span className="font-semibold text-gray-800">{classInfo.building}</span>
             </div>
             <div className="flex gap-2">
-              <Badge variant="secondary" className="text-xs">
+              <Badge variant="secondary" className="text-xs font-medium rounded-full">
                 {classInfo.floor}
               </Badge>
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="outline" className="text-xs font-medium rounded-full">
                 {classInfo.room}
               </Badge>
             </div>
@@ -59,38 +59,37 @@ const SchedulePage = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
       <Header />
       
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
+      <div className="px-4 py-4 md:py-8">
+        <div className="max-w-sm mx-auto">
           <div className="flex items-center justify-between mb-6">
             <Link to="/day-selection">
-              <Button variant="outline" size="sm">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Days
+              <Button variant="ghost" size="sm" className="rounded-full h-10 w-10 p-0 bg-white/80 hover:bg-white shadow-md">
+                <ArrowLeft className="h-5 w-5 text-gray-700" />
               </Button>
             </Link>
           </div>
 
-          <Card className="shadow-xl border-0 bg-white/90 backdrop-blur-sm">
-            <CardHeader className="text-center pb-4">
-              <CardTitle className="text-2xl font-bold text-gray-800 flex items-center justify-center gap-2">
-                <MapPin className="h-6 w-6" />
+          <Card className="shadow-2xl border-0 bg-white/95 backdrop-blur-sm rounded-3xl overflow-hidden">
+            <CardHeader className="text-center pb-6 pt-8 px-6">
+              <CardTitle className="text-xl font-bold text-gray-800 flex items-center justify-center gap-3">
+                <MapPin className="h-6 w-6 text-blue-600" />
                 {dayName} Schedule
               </CardTitle>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-sm leading-relaxed">
                 Your classes for {dayName}
               </p>
             </CardHeader>
             
-            <CardContent>
+            <CardContent className="px-4 pb-6">
               {schedule.length === 0 ? (
                 <div className="text-center py-12">
                   <div className="text-gray-400 mb-4">
-                    <Calendar className="h-16 w-16 mx-auto" />
+                    <Calendar className="h-16 w-16 mx-auto opacity-50" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-600 mb-2">
+                  <h3 className="text-xl font-bold text-gray-600 mb-2">
                     No Classes Today
                   </h3>
-                  <p className="text-gray-500">
+                  <p className="text-gray-500 text-sm">
                     Enjoy your free day! 🎉
                   </p>
                 </div>
