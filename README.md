@@ -1,73 +1,142 @@
-# Welcome to your Lovable project
 
-## Project info
+# Class Schedule Mobile App
+**คลาส สเกดูล โมบายแอป - แอปพลิเคชันตารางเรียนสำหรับมือถือ**
 
-**URL**: https://lovable.dev/projects/b3d85cf5-276c-4f8a-b654-06cad77eb633
+## Project Description
+This is a responsive mobile-first web application designed to help university students easily view and manage their class schedules. The app provides an intuitive interface optimized for iOS devices, allowing students to quickly access their daily class information including subject details, time slots, building locations, and room numbers.
 
-## How can I edit this code?
+**คำอธิบายโปรเจค:** แอปพลิเคชันเว็บที่ออกแบบมาสำหรับมือถือ เพื่อช่วยให้นักศึกษามหาวิทยาลัยสามารถดูและจัดการตารางเรียนได้อย่างง่ายดาย
 
-There are several ways of editing your application.
+## Key Features
+- **📱 Mobile-First Design**: Optimized for iOS devices with native-like user experience
+- **📅 Daily Schedule View**: Browse classes by day of the week
+- **🏢 Detailed Class Information**: View subject name, time, building, floor, and room details
+- **🎨 Modern UI/UX**: Clean, intuitive interface with smooth animations
+- **📍 Location Information**: Complete building and room details for easy navigation
+- **🔄 Responsive Design**: Works seamlessly across different screen sizes
+- **⚡ Fast Navigation**: Quick access to different days and class details
 
-**Use Lovable**
+## Installation and Usage
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b3d85cf5-276c-4f8a-b654-06cad77eb633) and start prompting.
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn package manager
 
-Changes made via Lovable will be committed automatically to this repo.
+### Setup Instructions
+1. **Clone the repository**
+   ```bash
+   git clone <YOUR_GIT_URL>
+   cd <YOUR_PROJECT_NAME>
+   ```
 
-**Use your preferred IDE**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+4. **Open in browser**
+   - Navigate to `http://localhost:5173`
+   - For mobile testing, access via your local network IP
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Build for Production
+```bash
+npm run build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## Tech Stack
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Routing**: React Router DOM
+- **State Management**: React Hooks
+- **Icons**: Lucide React
+- **Development**: ESLint, TypeScript
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Screenshots or Demo URL
+**Live Demo**: [https://lovable.dev/projects/b3d85cf5-276c-4f8a-b654-06cad77eb633](https://lovable.dev/projects/b3d85cf5-276c-4f8a-b654-06cad77eb633)
 
-**Use GitHub Codespaces**
+### App Preview
+- **Home Screen**: Student information selection interface
+- **Day Selection**: Interactive day picker with iOS-style design
+- **Schedule View**: Detailed class cards with time, location, and subject information
+- **Mobile Optimized**: Responsive design that works perfectly on mobile devices
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+*Note: Screenshots can be added to a `/screenshots` folder in the repository*
 
-## What technologies are used for this project?
+## Project Structure
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   └── Header.tsx      # App header component
+├── pages/              # Route components
+│   ├── Index.tsx       # Home page
+│   ├── DaySelectionPage.tsx
+│   └── SchedulePage.tsx
+├── data/               # Static data and types
+│   └── scheduleData.ts # Schedule data and interfaces
+└── App.tsx            # Main application component
+```
 
-This project is built with:
+## Project Status
+**Status**: ✅ **MVP (Minimum Viable Product)**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+**Current Version**: 1.0.0
 
-## How can I deploy this project?
+**Development Phase**: Complete and ready for demonstration
 
-Simply open [Lovable](https://lovable.dev/projects/b3d85cf5-276c-4f8a-b654-06cad77eb633) and click on Share -> Publish.
+### Future Enhancements
+- [ ] User authentication and personalized schedules
+- [ ] Class reminder notifications
+- [ ] Integration with university systems
+- [ ] Offline functionality
+- [ ] Multiple language support (Thai/English)
 
-## Can I connect a custom domain to my Lovable project?
+## Authors
+- **Nattawut Sap** - *Developer* - Initial work and full implementation
+  - Faculty of Science - Computer Science
+  - Contact: [Your Email/Student ID]
 
-Yes, you can!
+### Acknowledgments
+- Built with modern web technologies for optimal performance
+- Designed with mobile-first approach for better user experience
+- Inspired by native iOS design principles
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
+This project is licensed under the MIT License - see below for details:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+MIT License
+
+Copyright (c) 2024 Nattawut Sap
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+**Made with ❤️ for Computer Science students**  
+**สร้างด้วย ❤️ สำหรับนักศึกษาวิทยาการคอมพิวเตอร์**
