@@ -1,10 +1,10 @@
-
 export interface ClassSchedule {
   subject: string;
   time: string;
   building: string;
   floor: string;
   room: string;
+  type: "Lecture" | "Practice";
 }
 
 export interface WeeklySchedule {
@@ -18,14 +18,16 @@ export const mockScheduleData: WeeklySchedule = {
       time: "10:00 - 12:00",
       building: "Building 26506",
       floor: "5th Floor",
-      room: "Room 06"
+      room: "Room 06",
+      type: "Lecture"
     },
     {
       subject: "Database Management Systems",
       time: "14:00 - 16:00",
       building: "Building 26506",
       floor: "3rd Floor",
-      room: "Room 12"
+      room: "Room 12",
+      type: "Practice"
     }
   ],
   "Tuesday": [
@@ -34,14 +36,16 @@ export const mockScheduleData: WeeklySchedule = {
       time: "09:00 - 11:00",
       building: "Building 26507",
       floor: "2nd Floor",
-      room: "Room 08"
+      room: "Room 08",
+      type: "Lecture"
     },
     {
       subject: "Object-Oriented Programming",
       time: "13:00 - 15:00",
       building: "Building 26506",
       floor: "4th Floor",
-      room: "Room 15"
+      room: "Room 15",
+      type: "Practice"
     }
   ],
   "Wednesday": [
@@ -50,7 +54,8 @@ export const mockScheduleData: WeeklySchedule = {
       time: "11:00 - 13:00",
       building: "Building 26508",
       floor: "1st Floor",
-      room: "Room 03"
+      room: "Room 03",
+      type: "Lecture"
     }
   ],
   "Thursday": [
@@ -59,14 +64,16 @@ export const mockScheduleData: WeeklySchedule = {
       time: "10:00 - 12:00",
       building: "Building 26507",
       floor: "3rd Floor",
-      room: "Room 10"
+      room: "Room 10",
+      type: "Lecture"
     },
     {
       subject: "Web Development",
       time: "15:00 - 17:00",
       building: "Building 26506",
       floor: "2nd Floor",
-      room: "Room 07"
+      room: "Room 07",
+      type: "Practice"
     }
   ],
   "Friday": [
@@ -75,14 +82,16 @@ export const mockScheduleData: WeeklySchedule = {
       time: "08:00 - 10:00",
       building: "Building 26509",
       floor: "1st Floor",
-      room: "Room 01"
+      room: "Room 01",
+      type: "Lecture"
     },
     {
       subject: "Computer Graphics",
       time: "14:00 - 16:00",
       building: "Building 26507",
       floor: "4th Floor",
-      room: "Room 18"
+      room: "Room 18",
+      type: "Practice"
     }
   ],
   "Saturday": [],

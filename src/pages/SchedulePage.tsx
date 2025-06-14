@@ -17,9 +17,17 @@ const SchedulePage = () => {
       <CardContent className="p-4">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
           <div className="flex-1">
-            <h3 className="font-semibold text-lg text-gray-800 mb-2">
-              {classInfo.subject}
-            </h3>
+            <div className="flex items-center gap-2 mb-2">
+              <h3 className="font-semibold text-lg text-gray-800">
+                {classInfo.subject}
+              </h3>
+              <Badge 
+                variant={classInfo.type === "Lecture" ? "default" : "secondary"}
+                className="text-xs"
+              >
+                {classInfo.type}
+              </Badge>
+            </div>
             <div className="flex flex-wrap gap-2 text-sm text-gray-600">
               <div className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />
