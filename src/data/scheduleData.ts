@@ -22,11 +22,11 @@ export const mockScheduleData: WeeklySchedule = {
       type: "Lecture"
     },
     {
-      subject: "Database Management Systems",
-      time: "14:00 - 16:00",
+      subject: "System Analysis and Design",
+      time: "13:00 - 15:00",
       building: "Building 26506",
-      floor: "3rd Floor",
-      room: "Room 12",
+      floor: "5th Floor",
+      room: "Room 06",
       type: "Practice"
     }
   ],
