@@ -4,7 +4,7 @@ export interface ClassSchedule {
   building: string;
   floor: string;
   room: string;
-  type: "Lecture" | "Practice";
+  type: "Lecture" | "Practice" | "Study";
 }
 
 export interface WeeklySchedule {
@@ -32,69 +32,54 @@ export const mockScheduleData: WeeklySchedule = {
   ],
   "Tuesday": [
     {
-      subject: "Data Structures and Algorithms",
-      time: "09:00 - 11:00",
-      building: "Building 26507",
-      floor: "2nd Floor",
-      room: "Room 08",
+      subject: "Software Testing and Verification",
+      time: "9:00 - 12:00",
+      building: "Building 26303",
+      floor: "3rd Floor",
+      room: "Room 06",
       type: "Lecture"
-    },
-    {
-      subject: "Object-Oriented Programming",
-      time: "13:00 - 15:00",
-      building: "Building 26506",
-      floor: "4th Floor",
-      room: "Room 15",
-      type: "Practice"
     }
   ],
   "Wednesday": [
     {
-      subject: "Computer Networks",
-      time: "11:00 - 13:00",
-      building: "Building 26508",
-      floor: "1st Floor",
-      room: "Room 03",
+      subject: "Computer Networks and Cloud Computing Principles",
+      time: "13:00 - 16:00",
+      building: "Building 26502",
+      floor: "5th Floor",
+      room: "Room 02",
       type: "Lecture"
     }
   ],
   "Thursday": [
     {
-      subject: "Software Engineering",
-      time: "10:00 - 12:00",
-      building: "Building 26507",
-      floor: "3rd Floor",
-      room: "Room 10",
+      subject: "Physical Activities for Modern Life",
+      time: "13:00 - 16:00",
+      building: "Building 17",
+      floor: "--",
+      room: "--",
       type: "Lecture"
-    },
-    {
-      subject: "Web Development",
-      time: "15:00 - 17:00",
-      building: "Building 26506",
-      floor: "2nd Floor",
-      room: "Room 07",
-      type: "Practice"
     }
   ],
   "Friday": [
     {
-      subject: "Mathematics for Computer Science",
-      time: "08:00 - 10:00",
-      building: "Building 26509",
-      floor: "1st Floor",
-      room: "Room 01",
+      subject: "Seminar",
+      time: "13:00 - 16:00",
+      building: "Building 26302",
+      floor: "3rd Floor",
+      room: "Room 02",
       type: "Lecture"
-    },
-    {
-      subject: "Computer Graphics",
-      time: "14:00 - 16:00",
-      building: "Building 26507",
-      floor: "4th Floor",
-      room: "Room 18",
-      type: "Practice"
     }
   ],
-  "Saturday": [],
+  "Saturday": [
+    {
+      subject: "Project Management and Digital Startup",
+      time: "9:00 - 12:00",
+      building: "Building 26305",
+      floor: "3rd Floor",
+      room: "Room 05",
+      type: "Study"
+    }
+  ],
   "Sunday": []
 };
 
